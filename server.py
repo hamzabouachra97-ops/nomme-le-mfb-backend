@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
-model = genai.GenerativeModel("gemini-1.5-flash")
+gemini-1.5-flash en gemini-2.0-flash
 
 SYSTEM_PROMPT = """Tu es un agent spécialisé dans l'extraction de données de factures de transport pour Maroc Fruit Board (MFB).
 
