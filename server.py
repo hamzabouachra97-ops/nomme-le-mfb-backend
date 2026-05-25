@@ -32,7 +32,7 @@ Règles : champ introuvable = null, montant sans devise, dates en YYYY-MM-DD."""
 
 def extraire_depuis_bytes(pdf_bytes: bytes) -> dict:
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-1.5-flash",
         contents=[
             types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"),
             "Extrais les 13 champs MFB de cette facture et retourne uniquement le JSON.",
