@@ -9,7 +9,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
+client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"), http_options={'api_version': 'v1'})
 
 SYSTEM_PROMPT = """Tu es un agent spécialisé dans l'extraction de données de factures de transport pour Maroc Fruit Board (MFB).
 Extrais exactement ces 13 champs du PDF. Retourne UNIQUEMENT un objet JSON valide, sans texte autour, sans markdown.
