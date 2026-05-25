@@ -89,7 +89,7 @@ def health():
         "api_key_configuree": api_key_ok,
         "modele": "gemini-2.0-flash",
     }), 200
-
+model="gemini-1.5-flash",
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
